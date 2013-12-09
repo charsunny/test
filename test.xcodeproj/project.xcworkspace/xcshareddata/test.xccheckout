@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EFDC387E-6662-4D83-BF57-D6D59BE4F2AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>test</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB64C86C-A4A6-4679-B852-75D42435F469</key>
+		<string>https://svn.baidu.com/app/wise/wmap/trunk/client/components/ios/complatform</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>test/test.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB64C86C-A4A6-4679-B852-75D42435F469</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>FB64C86C-A4A6-4679-B852-75D42435F469</key>
+		<string>https://svn.baidu.com/app/wise/wmap</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://svn.baidu.com/app/wise/wmap/trunk/client/components/ios/complatform/test/test.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB64C86C-A4A6-4679-B852-75D42435F469</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB64C86C-A4A6-4679-B852-75D42435F469</string>
+			<key>IDESourceControlWCCName</key>
+			<string>workspace</string>
+		</dict>
+	</array>
+</dict>
+</plist>
