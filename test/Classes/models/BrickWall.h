@@ -16,13 +16,19 @@ typedef enum {
     SCENE_FORREST
 } SCENETYPE;
 
-class BrickWall : public cocos2d::CCSprite {
+typedef enum {
+    WALL_LEFT = 1,
+    WALL_RIGHT
+} WALLTYPE;
+
+class BrickWall : public cocos2d::CCSprite
+{
     
 public:
     
-    static BrickWall* create(SCENETYPE style);
+    static BrickWall* create(SCENETYPE style, WALLTYPE walltype);
     
-    bool init();
+    bool init(SCENETYPE style, WALLTYPE walltype);
     
     ~BrickWall();
     

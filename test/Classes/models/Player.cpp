@@ -7,11 +7,12 @@
 //
 
 #include "Player.h"
+#include "Enemy.h"
 #include "AnimationController.h"
 
 using namespace cocos2d;
 
-Player::Player():_playerState(PLAYER_RUNLEFT) {
+Player::Player():_playerState(PLAYER_RUNLEFT),_speed(10) {
     
 }
 
@@ -25,18 +26,23 @@ Player* Player::create() {
 
 bool Player::init() {
     if (CCSprite::init()) {
-        AnimationController::sharedAnimationController()->addAnimation("grossini-generic", 14, "playerrun");
-        CCAnimate* animate = createAnimationByState(_playerState);
-        CCAnimationFrame* frame = (CCAnimationFrame*)(animate->getAnimation()->getFrames()->objectAtIndex(0));
-        if (frame) {
-            m_obContentSize = frame->getSpriteFrame()->getRect().size;
-        }
-        this->runAction(CCRepeatForever::create(animate));
+        playAnimation(_playerState);
     }
     return true;
 }
 
-bool Player::attactByEnemey(Enemey* enemey) {
+void Player::setSpeed(int speed) {
+    _speed = speed;
+    if (_currectAnimate) {
+        _currectAnimate->setDelayPerUnit(1/float(speed));
+        this->runAction(CCRepeatForever::create(CCAnimate::create(_currectAnimate)));
+    }
+}
+
+bool Player::touchWithEnemey(Enemy* enemey) {
+    if (enemey->boundingBox().intersectsRect(this->boundingBox())) {
+        return true;
+    }
     return false;
 }
 
@@ -44,10 +50,23 @@ bool Player::getMagicStuff(MagicStuff* stuff) {
     return false;
 }
 
-CCAnimate* Player::createAnimationByState(PlayerStateEnum state) {
+void Player::playAnimation(PlayerStateEnum state) {
+    _playerState = state;
+    AnimationController::sharedAnimationController()->addAnimation("horse.png", 9, 3, "horserun");
+//    AnimationController::sharedAnimationController()->addAnimation("grossini-generic", 14, "playerrun");
+    _currectAnimate = createAnimationByState(state);
+    _currectAnimate->setDelayPerUnit(1/float(_speed));
+    CCAnimationFrame* frame = (CCAnimationFrame*)(_currectAnimate->getFrames()->objectAtIndex(0));
+    if (frame) {
+        m_obContentSize = frame->getSpriteFrame()->getRect().size;
+    }
+    this->runAction(CCRepeatForever::create(CCAnimate::create(_currectAnimate)));
+}
+
+CCAnimation* Player::createAnimationByState(PlayerStateEnum state) {
     switch (state) {
         case PLAYER_RUNLEFT: {
-            return CCAnimate::create(AnimationController::sharedAnimationController()->getAnimation("playerrun"));
+            return AnimationController::sharedAnimationController()->getAnimation("horserun");
         }
             break;
         case PLAYER_RUNRIGHT:

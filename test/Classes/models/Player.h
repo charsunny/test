@@ -18,10 +18,11 @@ typedef enum {
     PLAYER_DIE
 } PlayerStateEnum;
 
-class Enemey;
+class Enemy;
 class MagicStuff;
 
-class Player : public cocos2d::CCSprite {
+class Player : public cocos2d::CCSprite
+{
     
 public:
     
@@ -29,17 +30,29 @@ public:
     
     virtual bool init();
     
-    bool attactByEnemey(Enemey* enemey);
+    void playAnimation(PlayerStateEnum state);
+    
+    bool touchWithEnemey(Enemy* enemey);
     
     bool getMagicStuff(MagicStuff* stuff);
     
     ~Player(){};
     
+    int getSpeed() {
+        return _speed;
+    };
+    
+    void setSpeed(int speed);
+    
 protected:
     
-    cocos2d::CCAnimate* createAnimationByState(PlayerStateEnum state);
+    cocos2d::CCAnimation* createAnimationByState(PlayerStateEnum state);
     
-    CC_SYNTHESIZE(PlayerStateEnum, _playerState, PlayerState);
+    CC_SYNTHESIZE_READONLY(PlayerStateEnum, _playerState, PlayerState);
+    
+    int _speed;
+    
+    cocos2d::CCAnimation* _currectAnimate;
     
     Player();
     

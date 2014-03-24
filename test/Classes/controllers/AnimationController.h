@@ -21,6 +21,8 @@ public:
     
     void addAnimation(const char* plist, int framecount, const char* name);
     
+    void addAnimation(const char* filename, int framecount, int col, const char* aniName);
+    
     ~AnimationController();
     
 protected:

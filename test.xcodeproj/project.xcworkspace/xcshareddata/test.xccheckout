@@ -5,11 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>EFDC387E-6662-4D83-BF57-D6D59BE4F2AE</string>
+	<string>E0D9DA61-86B0-4DE6-91D6-48DC700DEED8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>test</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>5EB3C393-9DC4-4711-8D34-1221259EA288</key>
+		<string>https://github.com/charsunny/test.git</string>
 		<key>FB64C86C-A4A6-4679-B852-75D42435F469</key>
 		<string>https://svn.baidu.com/app/wise/wmap/trunk/client/components/ios/complatform</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>test/test.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>5EB3C393-9DC4-4711-8D34-1221259EA288</key>
+		<string>../..</string>
 		<key>FB64C86C-A4A6-4679-B852-75D42435F469</key>
 		<string>../../..</string>
 	</dict>
@@ -26,13 +30,21 @@
 		<string>https://svn.baidu.com/app/wise/wmap</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://svn.baidu.com/app/wise/wmap/trunk/client/components/ios/complatform/test/test.xcodeproj</string>
+	<string>https://github.com/charsunny/test.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>FB64C86C-A4A6-4679-B852-75D42435F469</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5EB3C393-9DC4-4711-8D34-1221259EA288</string>
+			<key>IDESourceControlWCCName</key>
+			<string>test</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>
